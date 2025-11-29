@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Test SDK (مهم جدًا) -->
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.0.0" />
+
+    <!-- xUnit framework -->
+    <PackageReference Include="xunit" Version="2.5.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+
+    <!-- Mocking -->
+    <PackageReference Include="Moq" Version="4.20.0" />
+
+    <!-- Identity (EntityFrameworkCore for .NET 8) -->
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.21" />
+
+    <!-- Configuration & Logging -->
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.21" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.21" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.21" />
+  </ItemGroup>
+ 
+
+  <ItemGroup>
+    <ProjectReference Include="..\Base.Services\Base.Services.csproj" />
+    <ProjectReference Include="..\Base.Shared\Base.Shared.csproj" />
+    <ProjectReference Include="..\Base.Repo\Base.Repo.csproj" />
+    <ProjectReference Include="..\Base.DAL\Base.DAL.csproj" />
+  </ItemGroup>
+
+</Project>
